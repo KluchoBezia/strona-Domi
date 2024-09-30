@@ -86,17 +86,21 @@ body {
 .nav {
   width: 1000px;
   background-color: white;
-  text-align: center;
   height: 82px;
   border-bottom: 2px solid #dec18c;
   margin-left: auto;
   margin-right: auto;
   display: flex; /* Użycie flexboxa */
-  justify-content: left; /* Wyśrodkuj poziomo */
-  align-items: center; /* Wyśrodkuj pionowo */
+  justify-content: left; /* Wyśrodkuj poziomo-gdy flex */
+  align-items: center; /* Wyśrodkuj pionowo-gdy flex */
   position: relative; /* Potrzebne do pozycjonowania submenu */
   
 }
+
+.navLeft {
+  width: 840px;
+}
+
 
 ol {
   padding: 0;
@@ -109,46 +113,42 @@ ol {
 ol a {
   color: black;
   text-decoration: none;
-  display: inline-block;
 }
 
 ol > li { /* stylizujemy element li którego rodzicem jest ol */
-  font-size: 16px;
   margin-left: 30px;
-  text-align: left;
+  height: 82px;
+  display: flex;
+  align-items: center;
+
 }
 
 .arrow::after {
   content: "\297F"; /* Unicode dla strzałki w dół */
   font-size: 20px;
-  position: static;
   padding-left: 7px;
-  display: inline-block;
 }
 
 ol > li:first-child {
-margin-left: 0;
+  margin-left: 0;
 }
 
 ol > li:hover {
   background-color: rgb(232, 251, 255);
-  display: flex; /* Użycie flexboxa */
-  justify-content: left; /* Wyśrodkuj poziomo */
-  align-items: center; /* Wyśrodkuj pionowo */
-
 }
 
 ol > li:hover > a {
-color: #dec18c;
-
+  color: #dec18c;
 }
 
 ol > li > ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  height: 40px;
-  display: none;
+  position: absolute; /* Zamiast relative */
+  top: 82px; /* Dopasuj tę wartość do wysokości głównego elementu menu */
+  background-color: white; /* Tło submenu */
+  display: none; /* Domyślnie ukryte */
 }
 
 ol > li:hover > ul { /* czyli jak ma wyglądać lista wewnętrzna ul (potomek ol > li ale tylko kiedy zachodzi hover elementu ol > li)*/
@@ -157,19 +157,22 @@ ol > li:hover > ul { /* czyli jak ma wyglądać lista wewnętrzna ul (potomek ol
 
 ol > li > ul > li {
  background-color: white; 
- position: relative; /* wyświetla się na tekście ale nie jak z-idex nad obrazkami itp jako warstwa */
  z-index: 100;
  border-top: 2px solid rgb(232, 251, 255); 
+ height: 25px;
+ width: auto;
+ border: solid 2px #ededed;
+ padding: 10px;
+ display: flex;
+ align-items: center;
 
-}
+  }
 
 ol > li > ul > li::before {
   content: "\297D";
   color: #dec18c;
   font-size: 15px;
-  position: static;
   padding-right: 7px;
-  display: inline-block;
   
 }
 
@@ -179,6 +182,10 @@ background-color: white;
 
 ol > li > ul > li:hover > a {
   color: #dec18c;
+}
+
+.navRight {
+  width: 160px;
 }
 
 #content {
