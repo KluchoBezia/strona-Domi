@@ -159,7 +159,7 @@ ol > li > ul > li {
  background-color: white; 
  z-index: 100;
  border-top: 2px solid rgb(232, 251, 255); 
- height: 25px;
+ height: 30px;
  width: auto;
  border: solid 2px #ededed;
  padding: 10px;
@@ -172,12 +172,26 @@ ol > li > ul > li::before {
   content: "\297D";
   color: #dec18c;
   font-size: 15px;
-  padding-right: 7px;
-  
+  padding-right: 7px; 
+  padding-left: 5px;
 }
+
+ol > li > ul > li::after {
+  content: "\2914";
+  color: black;
+  font-size: 15px;
+  padding-left: 7px;
+  padding-right: 5px;
+}
+
+ol > li > ul > li:hover::after {
+  color: #dec18c; /* Nowy kolor contentu po najechaniu myszką */
+}
+
 
 ol > li > ul > li:hover {
 background-color: white; 
+padding-left: 30px;
 }
 
 ol > li > ul > li:hover > a {
@@ -186,6 +200,58 @@ ol > li > ul > li:hover > a {
 
 .navRight {
   width: 160px;
+
+}
+
+#socials {
+  width: 160px;
+  height: 50px;
+  text-align: center;
+  display: flex; /* Ustawienie Flexboxa na liście */
+  justify-content: flex-end; /* Elementy będą wyrównane do prawej */
+  align-items: center; /* Wyśrodkuj pionowo-gdy flex */
+}
+
+
+#fb {
+  width: 25px;
+  height: 25px;
+  float: left;
+  background-color: #dec18c;
+  margin-left: 10px;
+}
+
+#fb:hover {
+  background-color: black;
+}
+
+#vin {
+  width: 25px;
+  height: 25px;
+  float: left;
+  margin-left: 10px;
+  background-color: #dec18c;
+}
+
+#vin:hover {
+  background-color: black;
+}
+
+#inst {
+  width: 25px;
+  height: 25px;
+  float: left;
+  margin-left: 10px;
+  background-color: #dec18c;
+}
+
+#inst:hover {
+  background-color: black;
+}
+
+#socials img {
+  width: 25px;
+  height: 25px;
 }
 
 #content {
@@ -195,64 +261,6 @@ ol > li > ul > li:hover > a {
   text-align: justify;
   padding-top: 10px;
   margin-top: 65px;
-}
-
-#socials {
-  width: 100%;
-  text-align: center;
-  background-color: #292929;
-}
-
-#socialdivs {
-  width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#fb {
-  width: 250px;
-  height: 155px;
-  float: left;
-}
-
-#fb:hover {
-  background-color: white;
-}
-
-#yt {
-  width: 250px;
-  height: 155px;
-  float: left;
-}
-
-#yt:hover {
-  background-color: white;
-}
-
-#tw {
-  width: 250px;
-  height: 155px;
-  float: left;
-}
-
-#tw:hover {
-  background-color: white;
-}
-
-#gplus {
-  width: 250px;
-  height: 155px;
-  float: left;
-}
-
-#gplus:hover {
-  background-color: white;
-}
-
-#socialdivs img {
-  width: 100px;
-  height: 100px;
-  padding: 30px;
 }
 
 #footer {
@@ -268,31 +276,3 @@ ol > li > ul > li:hover > a {
   top: 0;
   z-index: 100; /* która warstwa, ile warstw pokrywa */
 }
-
-
-/* .container {
-  background-color: orchid;
-  width: 1170px;
-  margin: 0 auto;
-}
-
-.companyLogo {
-  width: 300px; 
-  height: 300px;
-}
-
-body ul {
-  list-style: none;
-  display: flex;
-}
-
-.photosOfProducts {
-  width: 220px; 
-  height: 300px;
-  padding: 10px;
-}
-
-.photosSocialMedia {
-  width: 20px;
-  height: 20px;
-} */
