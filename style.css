@@ -1,7 +1,7 @@
 body {
   background-color: #fff;
   color: #191919;
-  font-family: "Varela Round", sans-serif;
+  font-family: "Varela Round";
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
@@ -48,15 +48,6 @@ body {
   background-color: #2980B9; /* Zmiana koloru po najechaniu */
 }
 
-/* .top-bar {
-  background-color: #f9f9f9;
-  color: #878787;
-  position: relative;
-  z-index: 998;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 56px;
-} */
 
 #header {
   width: 100%;
@@ -64,14 +55,17 @@ body {
 
 
 #logo {
-  width: 1000px;
+  width: 100%;
+  max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
 }
 
 #logo img {
-  height: 300px;
-  width: 300px;
+
+  height: 300px; /* Zachowaj proporcje, dopasuj wysokość */
+  width: 100%; /* Dopasuj szerokość do kontenera */
+  max-width: 300px;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -79,12 +73,13 @@ body {
 
 #longNav {
   width: 100%;
-  height: 30px;
+  height: 84px;
   border-top: 1px solid rgb(238, 238, 238);
 }
 
 .nav {
-  width: 1000px;
+  width: 100%;
+  max-width: 1170px;
   background-color: white;
   height: 82px;
   border-bottom: 2px solid #dec18c;
@@ -98,11 +93,12 @@ body {
 }
 
 .navLeft {
-  width: 840px;
+  width: 100%;
+  max-width: 1140px;
 }
 
 
-.nav ol {
+.navLeft ol {
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -110,12 +106,12 @@ body {
   justify-content: flex-start; /* Elementy będą wyrównane do lewej */
 }
 
-.nav ol a {
+.navLeft ol a {
   color: black;
   text-decoration: none;
 }
 
-.nav ol > li { /* stylizujemy element li którego rodzicem jest ol */
+.navLeft ol > li { /* stylizujemy element li którego rodzicem jest ol */
   margin-left: 30px;
   height: 82px;
   display: flex;
@@ -129,19 +125,19 @@ body {
   padding-left: 7px;
 }
 
-.nav ol > li:first-child {
+.navLeft ol > li:first-child {
   margin-left: 0;
 }
 
-.nav ol > li:hover {
+.navLeft ol > li:hover {
   background-color: rgb(232, 251, 255);
 }
 
-.nav ol > li:hover > a {
+.navLeft ol > li:hover > a {
   color: #dec18c;
 }
 
-.nav ol > li > ul {
+.navLeft ol > li > ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -151,11 +147,12 @@ body {
   display: none; /* Domyślnie ukryte */
 }
 
-.nav ol > li:hover > ul { /* czyli jak ma wyglądać lista wewnętrzna ul (potomek ol > li ale tylko kiedy zachodzi hover elementu ol > li)*/
+.navLeft ol > li:hover > ul { /* czyli jak ma wyglądać lista wewnętrzna ul (potomek ol > li ale tylko kiedy zachodzi hover elementu ol > li)*/
   display: block;
+  
 }
 
-.nav ol > li > ul > li {
+.navLeft ol > li > ul > li {
  background-color: white; 
  z-index: 100;
  border-top: 2px solid rgb(232, 251, 255); 
@@ -168,7 +165,7 @@ body {
 
   }
 
-.nav ol > li > ul > li::before {
+.navLeft ol > li > ul > li::before {
   content: "\297D";
   color: #dec18c;
   font-size: 15px;
@@ -176,7 +173,7 @@ body {
   padding-left: 5px;
 }
 
-.nav ol > li > ul > li::after {
+.navLeft ol > li > ul > li::after {
   content: "\2914";
   color: black;
   font-size: 15px;
@@ -184,26 +181,28 @@ body {
   padding-right: 5px;
 }
 
-.nav ol > li > ul > li:hover::after {
+.navLeft ol > li > ul > li:hover::after {
   color: #dec18c; /* Nowy kolor contentu po najechaniu myszką */
 }
 
-.nav ol > li > ul > li:hover {
+.navLeft ol > li > ul > li:hover {
   background-color: white; 
   padding-left: 30px;
+  transition: all .5s;
 }
 
-.nav ol > li > ul > li:hover > a {
+.navLeft ol > li > ul > li:hover > a {
   color: #dec18c;
 }
 
 .navRight {
-  width: 160px;
-
+  width: 100%;
+  max-width: 160px;
 }
 
 #socials {
-  width: 160px;
+  width: 100%;
+  max-width: 160px;
   height: 50px;
   text-align: center;
   display: flex; /* Ustawienie Flexboxa na liście */
@@ -213,7 +212,8 @@ body {
 
 
 #fb {
-  width: 25px;
+  width: 100%;
+  max-width: 25px;
   height: 25px;
   float: left;
   background-color: #dec18c;
@@ -225,7 +225,8 @@ body {
 }
 
 #vin {
-  width: 25px;
+  width: 100%;
+  max-width: 25px;
   height: 25px;
   float: left;
   margin-left: 10px;
@@ -237,7 +238,8 @@ body {
 }
 
 #inst {
-  width: 25px;
+  width: 100%;
+  max-width: 25px;
   height: 25px;
   float: left;
   margin-left: 10px;
@@ -249,69 +251,138 @@ body {
 }
 
 #socials img {
-  width: 25px;
+  width: 100%;
+  max-width: 25px;
   height: 25px;
 }
 
 #baner {
-  width: 1000px;
+  width: 100%;
+  max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
-
+  display: block;
+  height: 500px;
+  
 }
 
 #banerL {
   float: left;
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+  height: 500px;
+  margin: 50px 0px 50px 0px;
+}
+
+#banerL:hover {
+  cursor: pointer;
 }
 
 
 #banerImg {
- margin: 100px 30px 100px 0px; /*dół, prawo. góra, lewa*/
+ margin: 0px 30px 0px 0px; /*dół, prawo. góra, lewa*/
+
 }
 
 #banerImg img{
-  height: 500px;
-  width: 700px;
+  max-height: 500px;
+  width: 100%;
+  max-width: 800px;
 }
 
+
+#banerText {
+  position: absolute; /* Pozwala na umieszczenie tekstu nad zdjęciem */
+  border: 1px solid #dec18c; /* Ramka wokół tekstu */
+  max-width: 290px;
+  max-height: 125px;
+  width: 100%;
+  padding: 50px 35px;
+  background-color: #fff;
+  margin: auto;
+  box-shadow: 0 0 0 10px #fff; /* Biała ramka o grubości 10px wokół złotej ramki */
+  top: 70%; /* Wyśrodkuj pionowo */
+  left: 27%; /* Wyśrodkuj poziomo */
+  transform: translate(-50%, -50%); /* Przesuń ramkę, aby była wycentrowana na obrazku */  
+}
+
+#banerText h2 {
+  font-family: "Playfair Display";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+  margin-bottom: 15px;
+  line-height: 1.2; /* Zmniejsz linię, np. 1.2 lub 1.4 */
+  display: block;
+  text-align: center;
+  margin-top: 0px;
+}
+
+#banerText span {
+  text-align: center;
+  display: block;
+  color: #dec18c;
+  font-size: 15px;
+  line-height: 1.6;
+  text-decoration: underline;
+}
+
+
 #banerR {
-  width: 270px;
+  width: 100%;
+  max-width: 370px;
   height: 500px;
   background-color: #dec18c;
   float: left;
-  margin: 100px 0px 100px 0px;
+  margin: 50px 0px 50px 0px;
 }
 
 #banerR ol {
   display: block;
   list-style-type: none;
-  padding-left: 10px;
+  padding: 8px;
 }
 
 #banerR ol li {
-  padding: 10px;
-  padding-bottom: 5px;
+  margin-bottom: 2px;
+  padding-top: 4px;
   list-style-type: none;
-
-
+  margin-top: 8px;
+  transition: all .5s;
 }
 
 #banerR ol li a {
   color: white;
   text-decoration: none;
+  font-size: 14px;
+  display: inline-block;
+  line-height: 2;
+
 }
 
+
 #banerR ol li::before {
-  content: "\297D";
-  color: black;
-  font-size: 15px;
-  padding-left: 0px;
+  content: "\25B6"; /* Wypełniona strzałka w prawo */
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 9px;
   padding-right: 10px;
+  margin-left: 10px;
+  vertical-align: middle;
+  display: inline-block;
+  margin-top: -3px;
+  text-rendering: auto;
+  background-color: transparent; /* Przezroczyste tło */
+  border: none; /* Usuń ewentualne obramowania */
+
+  
 }
+
 
 #banerR ol li:hover {
   background-color:#dec18c;
-  padding-left: 30px;
+  padding-left: 25px;
+  transition: all .5s;
   }
   
 #banerR ol li:hover > a {
@@ -322,22 +393,21 @@ body {
 #banerR ol li ul {
   list-style-type: none;
   padding-left: 0px;
+
+}
+
+ul {
+  padding-inline-start: 25px;
 }
 
 #banerR ol li ul li:hover {
-  padding-left: 30px;
+  padding-left: 25px;
 }
 
-#banerR ol > li > ul > li > a {
-  
-}
-
-#banerR ol > li > ul > li:hover > a {
-
-}
 
 #content {
-  width: 1000px;
+  width: 100%;
+  max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
   text-align: justify;
