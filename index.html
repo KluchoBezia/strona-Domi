@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>BALAENA</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css" type="text/css"/>
         <link href="https://fonts.googleapis.com/css2?family=Kalnia+Glaze&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
@@ -19,8 +20,8 @@
 
             <div class="top-bar">
                 <div class="buttons">
-                  <a href="#" class="button">Moje Konto</a>
-                  <a href="#" class="button">Zaloguj</a>
+                  <a href="#" class="button" id="button1">Moje Konto</a>
+                  <a href="#" class="button" id="button2">Zaloguj</a>
                 </div>
             </div>
 
@@ -79,6 +80,13 @@
                                     <div style="clear: both;"></div>
                             </div>
                         </div>
+
+                        <div class="hamburger" id="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
                     </div>
                 </div> 
                 <div id="baner">
@@ -93,7 +101,7 @@
                         <ol>
                             <li ><a href="#">Prezenty dla niej</a></li>
                             <li ><a href="#">Przedmioty do kuchni</a></li>
-                            <li ><a href="#">Personalizowane przedmioty dla ciebie</a></li>
+                            <li ><a href="#">Personalizowane przedmioty</a></li>
                             <li ><a href="#">Kolczyki wkrętki i zwisające</a></li>
                                 <ul>
                                     <li><a href="#">Królewski błekit</a></li> 
@@ -149,6 +157,12 @@
             
         </script>
 
+<script>
+    document.getElementById('hamburger').addEventListener('click', function () {
+        document.querySelector('.navLeft').classList.toggle('active');
+    });
+</script>
+
     </body>
 </html>
 
@@ -157,42 +171,6 @@
 <!-- <!doctype html>
 
 
-#dec18c złoty
 
-body font-family "Varela Round" 400 16px #777777
-
-
-
-<html>
-  <head>
-    <title>BALAENA</title>
-    <link href="styles/styleDomi.css" rel="stylesheet"/>
-    <link rel="icon" type="image/png" href="images/simple_favicon.png"/>
-  </head>
-  <body>
-    <div class="container">
-      <section>
-        <img class="companyLogo" src="images/logo Domi.jpeg" alt="Logo firmy"/>
-      </section>
-      <section>
-        <ul>
-          <li><a href="https://www.vinted.pl/items/4797217296-brazowe-kwiatki"><img class="photosOfProducts" src="images/earrings_brown_flowers.jpeg"></a></li> 
-          <li><a href="https://www.vinted.pl/items/4811250106-kwiatki-wiszace-fioletowe"><img class="photosOfProducts" src="images/earrings_pink_flowers.jpeg"></a></li>
-          <li><a href="https://www.vinted.pl/items/4790553055-kolczyki-wiszace-rozowo-biale"><img class="photosOfProducts" src="images/earrings_red_flowers.jpeg"></a></li>
-          <li><a href="https://www.vinted.pl/items/4811245810-kwiatki-maki"><img class="photosOfProducts" src="images/earrings_red_leaves.jpeg"></a></li>
-        </ul>
-          <li></li>
-      </section>
-      <section>
-        <a href="https://www.vinted.pl/member/188090987-balaenaa">
-          <img clas="photosSocialMedia " src="images/Vinted_logo.png" alt="Logo Vinted" width="50" height="25">
-        </a>
-        <a href="https://www.instagram.com/balaena_clay/">
-          <img clas="photosSocialMedia " src="images/instagram_logo.png" alt="Logo Instagram" width="60" height="40">
-        </a>
-      </section>
-    </div>
-  </body>
-</html> -->
 
 
