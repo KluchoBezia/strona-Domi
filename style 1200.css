@@ -1,0 +1,121 @@
+
+@media only screen and (max-width: 1200px) {
+  /* Style dla średnie ekrany */
+
+  
+  #longNav {
+
+  }
+  
+  .container {
+    max-width: 905px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .nav {
+    max-width: 9435px;
+  }
+  
+  .navLeft {
+  max-width: 806px;
+  }
+
+  .navLeft ol {
+    
+  }
+
+  .navLeft ol > li:first-child {
+    
+  }
+  
+  .navRight {
+  max-width: 133px;
+  }
+  
+  #socials {
+
+  }
+  
+  #fb {
+
+  }
+  
+  #vin {
+
+  }
+  
+
+  #inst {
+
+  }
+  
+  
+  #socials img {
+
+  }
+  
+  #baner {
+    max-width: 970px;
+  }
+  
+  #banerL {
+    margin-left: 22px;
+    max-width: 617px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+
+  #banerImg {
+    max-width: 617px;
+    margin-right: 13px;
+  }
+  
+  #banerImg img{
+    max-width: 617px;
+  }
+  
+  
+  #banerText {
+    max-width: 280px;
+    max-height: 180px;
+    padding: 35px 35px;
+    top: 73%; /* Wyśrodkuj pionowo */
+    left: 34%; /* Wyśrodkuj poziomo */
+  }
+  
+  #banerText h2 {
+    font-family: "Playfair Display";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+    margin-bottom: 15px;
+    line-height: 1.2; /* Zmniejsz linię, np. 1.2 lub 1.4 */
+    display: block;
+    text-align: center;
+    margin-top: 0px;
+  }
+  
+  #banerText span {
+    text-align: center;
+    display: block;
+    color: #dec18c;
+    font-size: 15px;
+    line-height: 1.6;
+    text-decoration: underline;
+  }
+  
+  #banerR {
+    max-width: 257px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+  }
+
+  #banerList {
+    max-width: 292px;
+  }
+
+}
+

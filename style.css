@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #fff;
   color: #191919;
@@ -6,6 +12,10 @@ body {
   font-style: normal;
   font-size: 16px;
   margin: 0 !important;
+  padding-top: 50px;
+  width: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
 
 }
 
@@ -16,23 +26,25 @@ body {
 /* Styl dla top baru */
 .top-bar {
   width: 100%;
-  max-width: 1170px;
-  margin-top: 10px;
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
   background-color:#F8F8F8;
   color: #878787;
-  position: relative;
-  z-index: 998;
   font-size: 14px;
-  text-align: right; /* Wyrównanie przycisków do prawej strony */
-  max-height: 50px;
+  height: 60px;
 }
 
 /* Kontener dla przycisków */
 .buttons {
-  display: inline-block;
-  margin-top: 10px;
+  width: 100%;
+  max-width: 1170px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: right;
+  align-items: center;
 }
 
 /* Styl dla przycisków */
@@ -41,7 +53,6 @@ body {
   background-color: transparent; /*kolor przycisków */
   color:#878787;
   transition: color 0.4s ease;
-
 }
 
 #button2 {
@@ -67,7 +78,7 @@ body {
 }
 
 #header {
-  width: 100%;
+width: 100%;
 }
 
 
@@ -79,7 +90,6 @@ body {
 }
 
 #logo img {
-
   height: 300px; /* Zachowaj proporcje, dopasuj wysokość */
   width: 100%; /* Dopasuj szerokość do kontenera */
   max-width: 300px;
@@ -92,26 +102,38 @@ body {
   width: 100%;
   height: 84px;
   border-top: 1px solid rgb(238, 238, 238);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .nav {
   width: 100%;
-  max-width: 1170px;
+  max-width: 1370px;
   background-color: white;
   height: 82px;
   border-bottom: 2px solid #dec18c;
-  margin-left: auto;
-  margin-right: auto;
   display: flex; /* Użycie flexboxa */
   justify-content: left; /* Wyśrodkuj poziomo-gdy flex */
   align-items: center; /* Wyśrodkuj pionowo-gdy flex */
   position: relative; /* Potrzebne do pozycjonowania submenu */
+  margin-left: auto;
+  margin-right: auto;
   
 }
 
 .navLeft {
   width: 100%;
-  max-width: 1140px;
+  max-width: 1155px;
+
 }
 
 
@@ -147,7 +169,7 @@ body {
 }
 
 .navLeft ol > li:hover {
-  background-color: rgb(232, 251, 255);
+
 }
 
 .navLeft ol > li:hover > a {
@@ -177,10 +199,12 @@ body {
  height: 30px;
  width: auto;
  border: solid 2px #ededed;
- padding: 10px;
+ padding: 20px 10px;
  display: flex;
  align-items: center;
-  transition: all .5s;
+ transition: all .5s;
+ font-size: 14px;
+ color: #a72f2f;
   }
 
 .navLeft ol > li > ul > li::before {
@@ -216,6 +240,7 @@ body {
 .navRight {
   width: 100%;
   max-width: 160px;
+  height: 82;
 }
 
 .hamburger {
@@ -279,18 +304,19 @@ display: none;
 
 #baner {
   width: 100%;
-  max-width: 1170px;
+  max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
-  display: block;
   height: 500px;
+  padding-left: 15px;
+  padding-right: 15px;
   
 }
 
 #banerL {
   float: left;
   width: 100%;
-  max-width: 800px;
+  max-width: 750px;
   position: relative;
   height: 500px;
   margin: 50px 0px 50px 0px;
@@ -308,7 +334,7 @@ display: none;
 #banerImg img{
   max-height: 500px;
   width: 100%;
-  max-width: 800px;
+  max-width: 770px;
 }
 
 
@@ -316,13 +342,13 @@ display: none;
   position: absolute; /* Pozwala na umieszczenie tekstu nad zdjęciem */
   border: 1px solid #dec18c; /* Ramka wokół tekstu */
   max-width: 290px;
-  max-height: 125px;
+  max-height: 185px;
   width: 100%;
-  padding: 50px 35px;
+  padding: 35px 35px;
   background-color: #fff;
   margin: auto;
   box-shadow: 0 0 0 10px #fff; /* Biała ramka o grubości 10px wokół złotej ramki */
-  top: 70%; /* Wyśrodkuj pionowo */
+  top: 71%; /* Wyśrodkuj pionowo */
   left: 27%; /* Wyśrodkuj poziomo */
   transform: translate(-50%, -50%); /* Przesuń ramkę, aby była wycentrowana na obrazku */  
 }
@@ -351,8 +377,8 @@ display: none;
 
 #banerR {
   width: 100%;
-  max-width: 370px;
-  max-height: 500px;
+  max-width: 350px;
+  height: 500px;
   background-color: #dec18c;
   float: left;
   margin: 50px 0px 50px 0px;
@@ -424,7 +450,6 @@ ul {
 
 #content {
   width: 100%;
-  max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
   text-align: justify;
@@ -444,268 +469,46 @@ ul {
   left: 0;
   top: 0;
   z-index: 100; /* która warstwa, ile warstw pokrywa */
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
-@media only screen and (max-width: 768px) {
-  /* Style dla telefonów */
+#ADV {
+  display: flex; /* Włączenie Flexboxa */
+  justify-content: space-between; /* Równy odstęp między elementami */
 
-  body {
-    width: 100%;
-    font-size: 14px; /* Zmniejsz ogólny rozmiar czcionki */
-  }
-
-  .top-bar {
-    width: 100%;
-    font-size: 12px; /* Mniejszy rozmiar tekstu w top-barze */
-    height: 40px; /* Zmniejsz wysokość */
-    text-align: center;
-    margin-top: 50px;
-  }
-
-  #logo {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  #logo img {
-    max-height: 200px; /* Zmniejsz logo */
-    max-width: 200px;
-    margin-left: auto;
-    margin-left: auto;
-  }
-
-  #longNav {
-    width: 100%;
-    height: 40px;
-    border-top: 1px solid #fff
-  }
-
-  .nav {
-    height: 40px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color:#fff;
-    border-bottom: 2px solid #878787;
-  }
-
-  .navLeft {
-    display: none;
-  }
-
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    justify-content: space-between;
-    height: 24px;
-    width: 30px;
-    margin-left: auto;
-  }
-
-  .hamburger span {
-    background-color: #878787;
-    height: 3px;
-    width: 100%;
-    display: block;
-    transition: all 5s ease-in-out;
-  }
-
-  .navLeft.active {
-    display: block;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    z-index: 1000;
+  margin: auto;
+  margin-top: 20px;
+  position: relative;
+  max-width: 1150px;
+  height: 200px;
 }
 
-.navLeft ol {
-    flex-direction: column;
-    width: 100%;
-    text-align: left;
+.adv {
+  flex: 1; /* Wszystkie elementy `adv` będą miały taką samą szerokość */
+  margin: 10px 10px; /* Dodanie marginesów między elementami */
+  text-align: center; /* Wyśrodkowanie zawartości tekstowej */
 }
 
-.navLeft ol li {
-    padding: 10px 20px;
-}
-
-
-.navLeft ol {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  display: flex; /* Ustawienie Flexboxa na liście */
-  justify-content: flex-start; /* Elementy będą wyrównane do lewej */
-}
-
-.navLeft ol a {
-  color: black;
-  text-decoration: none;
-}
-
-.navLeft ol > li { /* stylizujemy element li którego rodzicem jest ol */
-  margin-left: 30px;
-  height: 82px;
-  display: flex;
-  align-items: center;
+.foto img{
+  width: 100%;
+  height: 100px;
+  max-width: 100px;
+  filter: brightness(0) saturate(100%) invert(59%) sepia(56%) saturate(474%) hue-rotate(50deg) brightness(90%) contrast(88%);
 
 }
 
-.arrow::after {
-  content: "\297F"; /* Unicode dla strzałki w dół */
-  font-size: 20px;
-  padding-left: 7px;
+.text {
+  margin-top: 40px;
 }
 
-.navLeft ol > li:first-child {
-  margin-left: 0;
-}
-
-.navLeft ol > li:hover {
-  background-color: rgb(232, 251, 255);
-}
-
-.navLeft ol > li:hover > a {
-  color: #dec18c;
-}
-
-.navLeft ol > li > ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  position: absolute; /* Zamiast relative */
-  top: 82px; /* Dopasuj tę wartość do wysokości głównego elementu menu */
-  background-color: white; /* Tło submenu */
-  display: none; /* Domyślnie ukryte */
-  z-index: 100;
-}
-
-.navLeft ol > li:hover > ul { /* czyli jak ma wyglądać lista wewnętrzna ul (potomek ol > li ale tylko kiedy zachodzi hover elementu ol > li)*/
-  display: block;
+.text h2{
+  font-family: "Varela Round";
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  color: #777777;
+  line-height: 1.8;
   
-}
-
-.navLeft ol > li > ul > li {
- background-color: white; 
- z-index: 100;
- border-top: 2px solid rgb(232, 251, 255); 
- height: 30px;
- width: auto;
- border: solid 2px #ededed;
- padding: 10px;
- display: flex;
- align-items: center;
-  transition: all .5s;
-  }
-
-.navLeft ol > li > ul > li::before {
-  content: "\297D";
-  color: #dec18c;
-  font-size: 15px;
-  padding-right: 7px; 
-  padding-left: 5px;
-}
-
-.navLeft ol > li > ul > li::after {
-  content: "\2914";
-  color: black;
-  font-size: 15px;
-  padding-left: 7px;
-  padding-right: 5px;
-}
-
-.navLeft ol > li > ul > li:hover::after {
-  color: #dec18c; /* Nowy kolor contentu po najechaniu myszką */
-}
-
-.navLeft ol > li > ul > li:hover {
-  background-color: white; 
-  padding-left: 30px;
-  transition: all .5s;
-}
-
-.navLeft ol > li > ul > li:hover > a {
-  color: #dec18c;
-}
-
-.navRight {
-  width: 100%;
-  max-width: 400px;
-  margin-left: 30px;
-}
-
-#socials {
-  width: 100%;
-  max-width: 400px;
-  height: 50px;
-  text-align: center;
-  display: flex; /* Ustawienie Flexboxa na liście */
-  justify-content: center; /* Elementy będą wyrównane na środku */
-  align-items: center; /* Wyśrodkuj pionowo-gdy flex */
-}
-
-
-#fb {
-  width: 100%;
-  max-width: 25px;
-  height: 25px;
-  background-color:#222222;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-#vin {
-  width: 100%;
-  max-width: 25px;
-  height: 25px;
-  margin-left: 5px;
-  margin-right: 5px;
-  background-color:#222222;
-}
-
-#inst {
-  width: 100%;
-  max-width: 25px;
-  height: 25px;
-  margin-left: 5px;
-  margin-right: 5px;
-  background-color:#222222;
-}
-
-#socials img {
-  width: 25px;
-  height: 25px;
-}
-  
-  #banerL {
-    max-width: 100%; /* Ustaw pełną szerokość na mniejszych ekranach */
-    margin: 20px 0;
-  }
-
-  #banerR {
-    max-width: 100%; /* Zajmie pełną szerokość na telefonie */
-    margin-top: 20px;
-    float: none; /* Usuń float, żeby elementy nie były obok siebie */
-  }
-
-  #banerText {
-    max-width: 90%; /* Dostosowanie wielkości tekstu na banerze */
-    padding: 20px;
-  }
-  
-  /* Dopasowanie marginesów i paddingów */
-  #content {
-    padding: 5px;
-    margin-top: 30px;
-  }
-
-  #footer {
-    padding: 15px;
-  }
-
 
 }
-
