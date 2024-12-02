@@ -461,21 +461,6 @@ ul {
 }
 
 
-#content {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: justify;
-  padding-top: 10px;
-  margin-top: 65px;
-}
-
-#footer {
-  text-align: center;
-  background-color: #222222;
-  padding: 30px;
-}
-
 .sticky {
   width: 100%;
   position: fixed; /* stała ustalona pozycja */
@@ -491,9 +476,10 @@ ul {
   justify-content: space-between; /* Równy odstęp między elementami */
   margin: auto;
   margin-top: 20px;
+  margin-bottom: 80px;
   position: relative;
   width: 100%;
-  max-width: 1150px;
+  max-width: 1250px;
   height: 200px;
 }
 
@@ -524,18 +510,29 @@ ul {
 }
 
 #CON {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.content{
 
 }
 
-.content {
-
-}
+/* #content {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  padding-top: 10px;
+  margin-top: 65px;
+} */
 
 .gold {
-  width: 90%;
-  max-width: 1120px;
+  width: 100%;
+  max-width: 1100px;
   margin: auto;
-  margin-top: 90px;
+  margin-top: 30px;
   height: 100px;
   border-top: 1px solid #dec18c;
   border-bottom: 1px solid #dec18c;
@@ -554,13 +551,13 @@ ul {
 
 .window {
   width: 100%;
-  max-width: 1120px;
+  max-width: 1100px;
   margin: auto;
   height: 424px;
   display: flex; /* Włączenie Flexboxa */
   justify-content: space-between; /* Równy odstęp między elementami */
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .windowSmall {
@@ -569,8 +566,24 @@ ul {
   height: 390px;
   margin: 0px 15px 30px 15px;
   border: 1px solid #eeeeee;
-
 }
+
+.windowSmallF {
+  width: 100%;
+  max-width: 270px;
+  height: 390px;
+  margin: 0px 15px 30px 0px;
+  border: 1px solid #eeeeee;
+}
+
+.windowSmallL { 
+  width: 100%;
+  max-width: 270px;
+  height: 390px;
+  margin: 0px 0px 30px 15px;
+  border: 1px solid #eeeeee;
+}
+
 
 .windowFoto {
   width: 100%;
@@ -580,19 +593,17 @@ ul {
 
 .windowFoto img {
   width: 100%;
-  max-width: 270px;
+  max-width: 275px;
   height: 268px;
 }
 
 .windowText {
   width: 100%;
-  max-width: 270px;
+  max-width: 275px;
   height: 126px;
   padding: 15px 35px 15px 35px;
 
 }
-
-
 
 .windowText h3 {
   width: 100%;
@@ -632,5 +643,11 @@ text-decoration: none;
 
 }
 
+
+#footer {
+  text-align: center;
+  background-color: #222222;
+  padding: 30px;
+}
 
 
