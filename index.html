@@ -150,7 +150,7 @@
             <div id="CON">
 
                 
-                <div id="content1" class="content">
+                <!-- <div class="content">
                     <div class="gold">
                         <div class="goldText">Kolczyki ręcznie robione</div>
                     </div>
@@ -158,7 +158,7 @@
                     </div>
                 </div>
 
-                <div id="content2" class="content">
+                <divclass="content">
                     <div class="gold">
                         <div class="goldText">Moda leśna i parkowa</div>
                     </div>
@@ -228,7 +228,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
             </div>
 
@@ -271,36 +271,90 @@
         </script>
 
         <script>
-            const items = [
-                { name: "Kolczyki wiszące granatowe liście", price: "10 zł", img: "img/earringsNavyLeaf.jpeg", link: "https://www.vinted.pl/items/4692957545-kolczyki-dlugie-wiszace" },
-                { name: "Kolczyki wiszące fioletowe liście", price: "15 zł", img: "img/earringsPurpleLeaf.jpeg", link: "https://www.vinted.pl/items/4692964216-kolczyki-wiszace-fioletowe" },
-                { name: "Kolczyki wiszące błękitne liście", price: "15 zł", img: "img/earringsBlueLeaf.jpeg", link: "https://www.vinted.pl/items/4635959878-kolczyki-niebiesko-czarne" },
-                { name: "Kolczyki wiszące mleczno zielone liście", price: "10 zł", img: "img/earringsGreenLeaf.jpeg", link: "https://www.vinted.pl/items/4635956509-kolczyki-zielone-marmurek" },
-            ];
-            const container = document.querySelector("#content1 .window");
-            items.forEach((item, idx) => {
-                const lastIdx = items.length - 1
-
-                let windowClass = "windowSmall"
-                if (idx == 0) {
-                    windowClass = "windowSmallF"
+            const contents = [
+                {
+                    goldenText: "Kolczyki ręcznie robione",
+                    items: [
+                        { name: "Kolczyki wiszące granatowe liście", price: "10 zł", img: "img/earringsNavyLeaf.jpeg", link: "https://www.vinted.pl/items/4692957545-kolczyki-dlugie-wiszace" },
+                        { name: "Kolczyki wiszące fioletowe liście", price: "15 zł", img: "img/earringsPurpleLeaf.jpeg", link: "https://www.vinted.pl/items/4692964216-kolczyki-wiszace-fioletowe" },
+                        { name: "Kolczyki wiszące błękitne liście", price: "15 zł", img: "img/earringsBlueLeaf.jpeg", link: "https://www.vinted.pl/items/4635959878-kolczyki-niebiesko-czarne" },
+                        { name: "Kolczyki wiszące mleczno zielone liście", price: "10 zł", img: "img/earringsGreenLeaf.jpeg", link: "https://www.vinted.pl/items/4635956509-kolczyki-zielone-marmurek" },
+                    ]
+                },
+                {
+                    goldenText: "Moda leśna i parkowa",
+                    items: [
+                        { name: "Kolczyki wiszące granatowe liście", price: "10 zł", img: "img/earringsNavyLeaf.jpeg", link: "https://www.vinted.pl/items/4692957545-kolczyki-dlugie-wiszace" },
+                        { name: "Kolczyki wiszące fioletowe liście", price: "15 zł", img: "img/earringsPurpleLeaf.jpeg", link: "https://www.vinted.pl/items/4692964216-kolczyki-wiszace-fioletowe" },
+                        { name: "Kolczyki wiszące błękitne liście", price: "15 zł", img: "img/earringsBlueLeaf.jpeg", link: "https://www.vinted.pl/items/4635959878-kolczyki-niebiesko-czarne" },
+                        { name: "Kolczyki wiszące mleczno zielone liście", price: "10 zł", img: "img/earringsGreenLeaf.jpeg", link: "https://www.vinted.pl/items/4635956509-kolczyki-zielone-marmurek" },
+                    ]
                 }
-                else if (idx == lastIdx) {
-                    windowClass = "windowSmallL"
-                }
+            ]
+            const container = document.querySelector("#CON");
+            contents.forEach(content => {
+                
+                // let itemsDiv = ""
+                // content.items.forEach((item, idx) => {
+                //     const lastIdx = items.length - 1
 
-                const article = `
-                    <div class=${windowClass}>
-                        <div class="windowFoto">
-                            <a href=${item.link}><img src=${item.img}></a></div>
-                        <div class="windowText">
-                            <a href=${item.link}><h3>${item.name} (${idx})</h2></a>
-                            <span>${item.price}}</span> 
+                //     let windowClass = "windowSmall"
+                //     if (idx == 0) {
+                //         windowClass = "windowSmallF"
+                //     }
+                //     else if (idx == lastIdx) {
+                //         windowClass = "windowSmallL"
+                //     }
+                //     const itemDiv = `
+                //         <div class=${windowClass}>
+                //             <div class="windowFoto">
+                //                 <a href=${item.link}><img src=${item.img}></a></div>
+                //             <div class="windowText">
+                //                 <a href=${item.link}><h3>${item.name} (${idx})</h2></a>
+                //                 <span>${item.price}}</span> 
+                //             </div>
+                //         </div>
+                //     `
+
+                //     itemsDiv += itemDiv
+                // })
+                const contentDiv = `
+                    <div class="content">
+                        <div class="gold">
+                            <div class="goldText">${content.goldenText}</div>
+                        </div>
+                        <div class="window">
                         </div>
                     </div>
                 `;
-                container.innerHTML += article;
-            });
+
+                container.innerHTML += contentDiv;                
+            })
+
+            // items.forEach((item, idx) => {
+            //     const lastIdx = items.length - 1
+
+            //     let windowClass = "windowSmall"
+            //     if (idx == 0) {
+            //         windowClass = "windowSmallF"
+            //     }
+            //     else if (idx == lastIdx) {
+            //         windowClass = "windowSmallL"
+            //     }
+
+            //     const article = `
+                    
+            //         <div class=${windowClass}>
+            //             <div class="windowFoto">
+            //                 <a href=${item.link}><img src=${item.img}></a></div>
+            //             <div class="windowText">
+            //                 <a href=${item.link}><h3>${item.name} (${idx})</h2></a>
+            //                 <span>${item.price}}</span> 
+            //             </div>
+            //         </div>
+            //     `;
+            //     container.innerHTML += article;
+            // });
         </script>
 
     </body>
