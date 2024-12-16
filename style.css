@@ -332,7 +332,10 @@ display: none;
   max-width: 750px;
   position: relative;
   height: 500px;
-  margin: 50px 0px 50px 0px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #banerL:hover {
@@ -463,6 +466,7 @@ ul {
 
 .sticky {
   width: 100%;
+  max-width: 2000px;
   position: fixed; /* stała ustalona pozycja */
   left: 0;
   top: 0;
@@ -474,7 +478,7 @@ ul {
 #ADV {
   display: flex; /* Włączenie Flexboxa */
   justify-content: space-between; /* Równy odstęp między elementami */
-  margin: auto;
+  margin:auto;
   margin-top: 20px;
   margin-bottom: 80px;
   position: relative;

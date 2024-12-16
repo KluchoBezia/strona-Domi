@@ -14,7 +14,7 @@
   }
   
   .nav {
-    max-width: 9435px;
+    max-width: 935px;
   }
   
   .navLeft {
@@ -117,5 +117,45 @@
     max-width: 292px;
   }
 
-}
+  .sticky {
+    left: 0;
+    top: 0;
+    padding-left: 40px;
+    max-width: 2000px;
+  }
 
+
+  #ADV {
+    max-width: 935px;
+
+  }
+
+  .adv {
+    margin: 5px 5px; /* Dodanie marginesów między elementami */
+  }
+
+  .gold {
+    max-width: 915px;
+  }
+
+  .window {
+    max-width: 915px;
+
+  }
+  
+  .windowSmall {
+    max-width: 210px;
+    height: 330px;
+    margin: 0px 25px 30px 15px;
+    border: 1px solid #eeeeee;
+  }
+
+  .windowFoto {
+    max-width: 220px;
+    height: 220px;
+  }
+  
+  .windowFoto img {
+    max-width: 220px;
+    height: 220px;
+  }

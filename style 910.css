@@ -1,52 +1,71 @@
 
 
-@media only screen and (max-width: 910px) {
+@media only screen and (max-width: 945px) {
   /* Style dla małe ekrany (połowa ekranu) */
 
-}
 
-@media only screen and (max-width: 768px) {
-  /* Style dla telefonów */
+
+/* @media only screen and (max-width: 768px) {
+  Style dla telefonów */
 
   body {
-    width: 100%;
-    font-size: 14px; /* Zmniejsz ogólny rozmiar czcionki */
+
   }
 
   .top-bar {
-    width: 100%;
-    font-size: 12px; /* Mniejszy rozmiar tekstu w top-barze */
-    height: 40px; /* Zmniejsz wysokość */
-    text-align: center;
-    margin-top: 50px;
+
   }
 
   #logo {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+
   }
 
   #logo img {
-    max-height: 200px; /* Zmniejsz logo */
-    max-width: 200px;
-    margin-left: auto;
-    margin-left: auto;
+    max-height: 250px; 
+    max-width: 250px;
+
   }
 
-  #longNav {
+  /* #longNav {
     width: 100%;
-    height: 40px;
-    border-top: 1px solid #fff
-  }
-
-  .nav {
-    height: 40px;
-    width: 100%;
+    height: 84px;
+    border-top: 1px solid rgb(238, 238, 238);
     margin-left: auto;
     margin-right: auto;
-    background-color:#fff;
-    border-bottom: 2px solid #878787;
+  } */
+
+  .container {
+    background-color: #333333;
+
+    /* width: 100%;
+    max-width: 1140px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto; */
+  }
+
+
+  .nav {
+    height: 50px;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: #333333;
+    border-bottom: 2px solid #333333;
+
+    /* width: 100%;
+    max-width: 1370px;
+    background-color: white;
+    height: 82px;
+    border-bottom: 2px solid #dec18c;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto; */
+
   }
 
   .navLeft {
@@ -60,7 +79,8 @@
     justify-content: space-between;
     height: 24px;
     width: 30px;
-    margin-left: auto;
+    margin-left: 50px;
+    color: #ededed
   }
 
   .hamburger span {
@@ -192,8 +212,10 @@
 
 .navRight {
   width: 100%;
-  max-width: 400px;
-  margin-left: 30px;
+  margin-left: auto;
+  margin-right: 50px;
+  justify-content: flex-end; /* Elementy będą wyrównane do prawej */
+
 }
 
 #socials {
@@ -204,16 +226,16 @@
   display: flex; /* Ustawienie Flexboxa na liście */
   justify-content: center; /* Elementy będą wyrównane na środku */
   align-items: center; /* Wyśrodkuj pionowo-gdy flex */
-}
 
+}
 
 #fb {
   width: 100%;
   max-width: 25px;
   height: 25px;
-  background-color:#222222;
   margin-left: 5px;
   margin-right: 5px;
+  background-color: #ededed;
 }
 
 #vin {
@@ -222,7 +244,7 @@
   height: 25px;
   margin-left: 5px;
   margin-right: 5px;
-  background-color:#222222;
+  background-color:#ededed;
 }
 
 #inst {
@@ -231,39 +253,144 @@
   height: 25px;
   margin-left: 5px;
   margin-right: 5px;
-  background-color:#222222;
+  background-color:#ededed;
+
 }
 
 #socials img {
   width: 25px;
   height: 25px;
+  filter: brightness(0) saturate(100%) invert(16%) sepia(3%) saturate(193%) hue-rotate(314deg) brightness(95%) contrast(86%);
 }
-  
-  #banerL {
-    max-width: 100%; /* Ustaw pełną szerokość na mniejszych ekranach */
-    margin: 20px 0;
-  }
 
-  #banerR {
-    max-width: 100%; /* Zajmie pełną szerokość na telefonie */
-    margin-top: 20px;
-    float: none; /* Usuń float, żeby elementy nie były obok siebie */
-  }
+#baner {
+  max-width: 940px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: auto;
 
-  #banerText {
-    max-width: 90%; /* Dostosowanie wielkości tekstu na banerze */
-    padding: 20px;
-  }
+}
+
+#banerL {
+  max-width: 720px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  padding: 0px;
+ 
+}
+
+#banerImg {
+  max-width: 750px;
+  height: 500px;
+  margin: 0px 0px 0px 0px;
+
+}
+
+#banerImg img{
+  max-width: 750px;
+  height: 500px;
+}
+
+
+#banerText {
+  max-width: 330px;
+  padding: 35px 35px;
+  top: 73%; /* Wyśrodkuj pionowo */
+  left: 34%; /* Wyśrodkuj poziomo */
+}
+
+#banerText h2 {
+  font-family: "Playfair Display";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+  margin-bottom: 15px;
+  line-height: 1.2; /* Zmniejsz linię, np. 1.2 lub 1.4 */
+  display: block;
+  text-align: center;
+  margin-top: 0px;
+}
+
+#banerText span {
+  text-align: center;
+  display: block;
+  color: #dec18c;
+  font-size: 15px;
+  line-height: 1.6;
+  text-decoration: underline;
+}
+
+#banerR {
+  max-width: 720px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0px auto 50px auto;
+  float: none;
+
+}
+
+#banerR ol {
+  padding: 8px 8px 8px 8px;
+  margin-top: 0px;
+}
+
+#banerList {
+  max-width: 292px;
+}
+
+.sticky {
+  left: 0;
+  top: 0;
+  padding-left: 40px;
+  max-width: 2000px;
+}
+
+#ADV {
+padding: 0px 20px 0px 20px;
+max-width: 740px;
+}
+
+#CON {
+  max-width: 940px;
+  padding-left: 20px;
   
-  /* Dopasowanie marginesów i paddingów */
-  #content {
-    padding: 5px;
-    margin-top: 30px;
-  }
+}
+
+.gold {
+  max-width: 915px;
+  padding: 0px 20px;
+}
+
+.window {
+  max-width: 915px;
+
+}
+
+.windowSmall {
+  max-width: 210px;
+  height: 330px;
+  margin: 0px 25px 30px 15px;
+  border: 1px solid #eeeeee;
+}
+
+.windowFoto {
+  max-width: 220px;
+  height: 220px;
+}
+
+.windowFoto img {
+  max-width: 220px;
+  height: 220px;
+}
 
   #footer {
     padding: 15px;
   }
 
 }
+
 
