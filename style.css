@@ -73,7 +73,7 @@ body {
 
 /* Efekt hover dla przycisków */
 .button:hover {
-  color: #dec18c; /* Zmiana koloru po najechaniu */
+  color: #7aabb4; /* Zmiana koloru po najechaniu */
   transition: color 0.4s ease;
 }
 
@@ -120,7 +120,7 @@ width: 100%;
   max-width: 1370px;
   background-color: white;
   height: 82px;
-  border-bottom: 2px solid #dec18c;
+  border-bottom: 2px solid #7aabb4;
   display: flex; /* Użycie flexboxa */
   justify-content: left; /* Wyśrodkuj poziomo-gdy flex */
   align-items: center; /* Wyśrodkuj pionowo-gdy flex */
@@ -159,7 +159,7 @@ width: 100%;
 }
 
 .arrow::after {
-  content: "\297F"; /* Unicode dla strzałki w dół */
+  content: "🐋"; /* Unicode dla strzałki w dół */
   font-size: 20px;
   padding-left: 7px;
 }
@@ -217,7 +217,7 @@ width: 100%;
 
 .navLeft ol > li > ul > li::before {
   content: "\297D";
-  color: #dec18c;
+  color: #7aabb4;
   font-size: 15px;
   padding-right: 7px; 
   padding-left: 5px;
@@ -237,7 +237,7 @@ width: 100%;
 }
 
 .navLeft ol > li > ul > li:hover::after {
-  color: #dec18c; /* Nowy kolor contentu po najechaniu myszką */
+  color: #7aabb4; /* Nowy kolor contentu po najechaniu myszką */
 }
 
 .navLeft ol > li > ul > li:hover {
@@ -247,7 +247,7 @@ width: 100%;
 }
 
 .navLeft ol > li > ul > li:hover > a {
-  color: #dec18c;
+  color: #7aabb4;
 }
 
 .navRight {
@@ -290,7 +290,7 @@ display: none;
   height: 25px;
   float: left;
   margin-left: 10px;
-  background-color: #dec18c;
+  background-color: #7aabb4;
 }
 
 #vin:hover {
@@ -303,7 +303,7 @@ display: none;
   height: 25px;
   float: left;
   margin-left: 10px;
-  background-color: #dec18c;
+  background-color: #7aabb4;
 }
 
 #inst:hover {
@@ -356,7 +356,7 @@ display: none;
 
 #banerText {
   position: absolute; /* Pozwala na umieszczenie tekstu nad zdjęciem */
-  border: 1px solid #dec18c; /* Ramka wokół tekstu */
+  border: 1px solid #7aabb4; /* Ramka wokół tekstu */
   max-width: 290px;
   max-height: 185px;
   width: 100%;
@@ -384,7 +384,7 @@ display: none;
 #banerText span {
   text-align: center;
   display: block;
-  color: #dec18c;
+  color: #7aabb4;
   font-size: 15px;
   line-height: 1.6;
   text-decoration: underline;
@@ -395,7 +395,7 @@ display: none;
   width: 100%;
   max-width: 350px;
   height: 500px;
-  background-color: #dec18c;
+  background-color: #7aabb4;
   float: left;
   margin: 50px 0px 50px 0px;
 }
@@ -425,7 +425,7 @@ display: none;
 
 
 #banerR ol li::before {
-  content: "\25B6"; /* Wypełniona strzałka w prawo */
+  content: "🐋"; /* Wypełniona strzałka w prawo */
   color: rgba(0, 0, 0, 0.4);
   font-size: 9px;
   padding-right: 10px;
@@ -439,13 +439,13 @@ display: none;
 }
 
 #banerR ol li:hover {
-  background-color:#dec18c;
+  background-color:#7aabb4;
   padding-left: 25px;
   transition: all .5s;
   }
   
 #banerR ol li:hover > a {
-  color: #dec18c;
+  color: #7aabb4;
   color: white;
   }
 
@@ -525,8 +525,8 @@ ul {
   margin: auto;
   margin-top: 30px;
   height: 100px;
-  border-top: 1px solid #dec18c;
-  border-bottom: 1px solid #dec18c;
+  border-top: 1px solid #7aabb4;
+  border-bottom: 1px solid #7aabb4;
   margin-bottom: 40px;
 
 }
@@ -601,7 +601,7 @@ ul {
 }
 
 .windowText h3:hover {
-  color: #dec18c;
+  color: #7aabb4;
 }
 
 .windowText a {
@@ -617,7 +617,7 @@ text-decoration: none;
   font-family: "Varela Round";
   font-weight: 500;
   font-style: normal;
-  color: #dec18c;
+  color: #7aabb4;
   line-height: 1;
   display: block;
 
