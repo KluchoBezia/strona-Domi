@@ -127,17 +127,19 @@ width: 100%;
   position: relative; /* Potrzebne do pozycjonowania submenu */
   margin-left: auto;
   margin-right: auto;
-  
 }
+
+
+
+
+
 
 .navLeft {
   width: 100%;
   max-width: 1155px;
-
 }
 
-
-.navLeft ol {
+.navLeft-list {
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -145,38 +147,33 @@ width: 100%;
   justify-content: flex-start; /* Elementy będą wyrównane do lewej */
 }
 
-.navLeft ol a {
+.navLeft-list a {
   color: black;
   text-decoration: none;
 }
 
-.navLeft ol > li { /* stylizujemy element li którego rodzicem jest ol */
+.navLeft-item { /* stylizujemy element li którego rodzicem jest ol */
   margin-left: 30px;
   height: 82px;
   display: flex;
   align-items: center;
-
 }
 
 .arrow::after {
   content: "🐋"; /* Unicode dla strzałki w dół */
   font-size: 20px;
-  padding-left: 7px;
+  padding-left: 4px;
 }
 
-.navLeft ol > li:first-child {
+.navLeft-item:first-child {
   margin-left: 0;
 }
 
-.navLeft ol > li:hover {
-
+.navLeft-item:hover > a {
+  color: #7aabb4;
 }
 
-.navLeft ol > li:hover > a {
-  color: #dec18c;
-}
-
-.navLeft ol > li > ul {
+.menu{
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -188,34 +185,61 @@ width: 100%;
   border: solid 2px #ededed;
 }
 
-.navLeft ol > li:hover > ul { /* czyli jak ma wyglądać lista wewnętrzna ul (potomek ol > li ale tylko kiedy zachodzi hover elementu ol > li)*/
+.submenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute; /* Pozycjonowanie względem rodzica .menu-item */
+  top: 0; /* Dopasowuje górną krawędź submenu do góry menu-item */
+  left: 100%; /* Ustawia submenu po prawej stronie rodzica */
+  background-color: white; /* Tło submenu */
+  display: none; /* Domyślnie ukryte */
+  z-index: 100;
+  border: solid 2px #ededed;
+}
+
+.navLeft-item:hover > .menu,
+.menu-item:hover > .submenu { /* czyli jak ma wyglądać lista wewnętrzna ul (potomek ol > li ale tylko kiedy zachodzi hover elementu ol > li)*/
   display: block;
-  
 }
 
-.navLeft ol > li > ul > li {
- background-color: white; 
- z-index: 100;
- border-top: 2px solid rgb(232, 251, 255); 
- height: 30px;
- width: auto;
- padding: 25px 15px;
- display: flex;
- align-items: center;
- transition: all .5s;
- padding-right: 100px;
- position: relative;
+.menu-item{
+  background-color: white; 
+  z-index: 100;
+  border-top: 2px solid rgb(232, 251, 255); 
+  height: 30px;
+  width: auto;
+  padding: 25px 15px;
+  display: flex;
+  align-items: center;
+  transition: all .5s;
+  padding-right: 100px;
+  position: relative;
 }
 
-.navLeft ol > li > ul > li a {
+.submenu-item {
+  background-color: white; 
+  z-index: 100;
+  border-top: 2px solid rgb(232, 251, 255); 
+  height: 30px;
+  width: auto;
+  padding: 25px 15px;
+  display: flex;
+  align-items: center;
+  transition: all .5s;
+  padding-right: 100px;
+  position: relative;
+}
+
+.menu-item a,
+.submenu-item {
   color: #333333;
   font-size: 14px;
   letter-spacing: 0.05em;
-
 }
 
-
-.navLeft ol > li > ul > li::before {
+.menu-item::before,
+.submenu-item::before {
   content: "\297D";
   color: #7aabb4;
   font-size: 15px;
@@ -223,7 +247,7 @@ width: 100%;
   padding-left: 5px;
 }
 
-.navLeft ol > li > ul > li::after {
+.menu-item::after{
   content: "\2914";
   color: black;
   font-size: 15px;
@@ -232,23 +256,30 @@ width: 100%;
   right: 0; /* Przesuwa pseudo-element do prawej krawędzi kontenera */
   width: auto; /* lub konkretna wartość */
   height: auto; /* upewnij się, że wysokość nie ogranicza widoczności */
-
-
 }
 
-.navLeft ol > li > ul > li:hover::after {
+.menu-item:hover::after,
+.submenu-item:hover::after {
   color: #7aabb4; /* Nowy kolor contentu po najechaniu myszką */
 }
 
-.navLeft ol > li > ul > li:hover {
+.menu-item:hover,
+.submenu-item:hover {
   background-color: white; 
   padding-left: 30px;
   transition: all .5s;
 }
 
-.navLeft ol > li > ul > li:hover > a {
+.menu-item:hover > a,
+.submenu-item:hover > a {
   color: #7aabb4;
 }
+
+
+
+
+
+
 
 .navRight {
   width: 100%;
@@ -276,7 +307,7 @@ display: none;
   max-width: 25px;
   height: 25px;
   float: left;
-  background-color: #dec18c;
+  background-color: #7aabb4;
   margin-left: 10px;
 }
 
@@ -317,152 +348,55 @@ display: none;
 
 #baner {
   width: 100%;
-  max-width: 1140px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 500px;
-  padding-left: 15px;
-  padding-right: 15px;
-  
-}
-
-#banerL {
-  float: left;
-  width: 100%;
-  max-width: 750px;
   position: relative;
   height: 500px;
   margin-top: 50px;
   margin-bottom: 50px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 0px;
+  margin-right: 0px;
+  overflow: hidden; /* Zapobiega wyjściu fal poza baner */
 }
 
-#banerL:hover {
+#baner:hover {
   cursor: pointer;
 }
 
-#banerImg {
- margin: 0px 30px 0px 0px; /*dół, prawo. góra, lewa*/
-
-}
-
 #banerImg img{
-  max-height: 500px;
   width: 100%;
-  max-width: 770px;
-}
-
-
-#banerText {
-  position: absolute; /* Pozwala na umieszczenie tekstu nad zdjęciem */
-  border: 1px solid #7aabb4; /* Ramka wokół tekstu */
-  max-width: 290px;
-  max-height: 185px;
-  width: 100%;
-  padding: 35px 35px;
-  background-color: #fff;
-  margin: auto;
-  box-shadow: 0 0 0 10px #fff; /* Biała ramka o grubości 10px wokół złotej ramki */
-  top: 71%; /* Wyśrodkuj pionowo */
-  left: 27%; /* Wyśrodkuj poziomo */
-  transform: translate(-50%, -50%); /* Przesuń ramkę, aby była wycentrowana na obrazku */  
-}
-
-#banerText h2 {
-  font-family: "Playfair Display";
-  font-weight: 400;
-  font-style: normal;
-  font-size: 35px;
-  margin-bottom: 15px;
-  line-height: 1.2; /* Zmniejsz linię, np. 1.2 lub 1.4 */
-  display: block;
-  text-align: center;
-  margin-top: 0px;
-}
-
-#banerText span {
-  text-align: center;
-  display: block;
-  color: #7aabb4;
-  font-size: 15px;
-  line-height: 1.6;
-  text-decoration: underline;
-}
-
-
-#banerR {
-  width: 100%;
-  max-width: 350px;
   height: 500px;
-  background-color: #7aabb4;
-  float: left;
-  margin: 50px 0px 50px 0px;
-}
-
-#banerR ol {
+  /* object-fit: cover; Zapewnia dobre dopasowanie obrazu */
   display: block;
-  list-style-type: none;
-  padding: 8px;
 }
 
-#banerR ol li {
-  margin-bottom: 2px;
-  padding-top: 4px;
-  list-style-type: none;
-  margin-top: 8px;
-  transition: all .5s;
+.wave-bottom {
+  position: absolute;
+  bottom: -90px; /* Umieszcza fale na górze */
+  left: 0;
+  width: 100%;
+  z-index: 1;
 }
 
-#banerR ol li a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-  display: inline-block;
-  line-height: 2;
-
+.wave-bottom img {
+  width: 100%; /* Rozciąga SVG na całą szerokość */
+  height: 200px;
+  display: block;
 }
 
-
-#banerR ol li::before {
-  content: "🐋"; /* Wypełniona strzałka w prawo */
-  color: rgba(0, 0, 0, 0.4);
-  font-size: 9px;
-  padding-right: 10px;
-  margin-left: 10px;
-  vertical-align: middle;
-  display: inline-block;
-  margin-top: -3px;
-  text-rendering: auto;
-  background-color: transparent; /* Przezroczyste tło */
-  border: none; /* Usuń ewentualne obramowania */
+.wave-top {
+  position: absolute;
+  top: -40px; /* Umieszcza fale na górze */
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  transform: rotate(180deg); /* Odwraca falę */
+  /* overflow: hidden; */
 }
 
-#banerR ol li:hover {
-  background-color:#7aabb4;
-  padding-left: 25px;
-  transition: all .5s;
-  }
-  
-#banerR ol li:hover > a {
-  color: #7aabb4;
-  color: white;
-  }
-
-#banerR ol li ul {
-  list-style-type: none;
-  padding-left: 0px;
-
+.wave-top img {
+  width: 100%; /* Rozciąga SVG na całą szerokość */
+  height: 100px;
+  display: block;
 }
-
-ul {
-  padding-inline-start: 25px;
-}
-
-#banerR ol li ul li:hover {
-  padding-left: 25px;
-}
-
 
 .sticky {
   width: 100%;
