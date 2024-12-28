@@ -91,3 +91,13 @@
 
                 container.innerHTML += contentDiv;
             });
+
+
+            // przesunięcie banera menu niżej po kliknięciu hamburgera
+
+            const hamburger = document.getElementById('hamburger'); // Pobierz element hamburgera
+
+            hamburger.addEventListener('click', () => {
+            document.body.classList.toggle('menu-open'); // Przełącz klasę menu-open
+            });
+

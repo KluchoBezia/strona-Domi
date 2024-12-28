@@ -1,129 +1,46 @@
 
 @media only screen and (max-width: 1200px) {
   /* Style dla średnie ekrany */
-
-  
-  #longNav {
-
-  }
   
   .container {
-    max-width: 905px;
+    max-width: 1100px;
     padding-left: 15px;
     padding-right: 15px;
   }
   
   .nav {
-    max-width: 935px;
+    max-width: 1100px;
   }
   
   .navLeft {
-  max-width: 806px;
-  }
-
-  .navLeft ol {
-    
-  }
-
-  .navLeft ol > li:first-child {
-    
+  max-width: 850px;
   }
   
-  .navRight {
-  max-width: 133px;
-  }
-  
-  #socials {
-
-  }
-  
-  #fb {
-
-  }
-  
-  #vin {
-
-  }
-  
-
-  #inst {
-
-  }
-  
-  
-  #socials img {
-
-  }
-  
-  #baner {
-    max-width: 970px;
-  }
-  
-  #banerL {
-    margin-left: 22px;
-    max-width: 617px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  
-
-  #banerImg {
-    max-width: 617px;
-    margin-right: 13px;
-  }
-  
-  #banerImg img{
-    max-width: 617px;
-  }
-  
-  
-  #banerText {
-    max-width: 280px;
-    max-height: 180px;
-    padding: 35px 35px;
-    top: 73%; /* Wyśrodkuj pionowo */
-    left: 34%; /* Wyśrodkuj poziomo */
-  }
-  
-  #banerText h2 {
-    font-family: "Playfair Display";
-    font-weight: 400;
-    font-style: normal;
-    font-size: 35px;
-    margin-bottom: 15px;
-    line-height: 1.2; /* Zmniejsz linię, np. 1.2 lub 1.4 */
-    display: block;
-    text-align: center;
-    margin-top: 0px;
-  }
-  
-  #banerText span {
-    text-align: center;
-    display: block;
-    color: #dec18c;
+  .navLeft-list {
+    justify-content: space-evenly;
     font-size: 15px;
-    line-height: 1.6;
-    text-decoration: underline;
   }
   
-  #banerR {
-    max-width: 257px;
-    padding-left: 10px;
-    padding-right: 10px;
-
+  .navLeft-item {
+    padding: 0px;
+    margin: 0px;
+    max-width: auto;
+  }
+  
+  .arrow::after {
+    font-size: 15px;
+    padding-left: 4px;
+  }
+  
+  .navLeft-item:first-child {
+    margin-top: 1px;
   }
 
-  #banerList {
-    max-width: 292px;
+  .navRight {
+  max-width: 150px;
+  padding-left: 100px;
+  justify-content: flex-end;
   }
-
-  .sticky {
-    left: 0;
-    top: 0;
-    padding-left: 40px;
-    max-width: 2000px;
-  }
-
 
   #ADV {
     max-width: 935px;
@@ -140,14 +57,11 @@
 
   .window {
     max-width: 915px;
-
   }
   
   .windowSmall {
     max-width: 210px;
     height: 330px;
-    margin: 0px 25px 30px 15px;
-    border: 1px solid #eeeeee;
   }
 
   .windowFoto {
@@ -159,3 +73,5 @@
     max-width: 220px;
     height: 220px;
   }
+
+}

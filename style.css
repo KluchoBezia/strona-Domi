@@ -16,6 +16,7 @@ body {
   width: 100%;
   padding-left: 0px;
   padding-right: 0px;
+  overflow-x: hidden;
 
 }
 
@@ -120,7 +121,6 @@ width: 100%;
   max-width: 1370px;
   background-color: white;
   height: 82px;
-  border-bottom: 2px solid #7aabb4;
   display: flex; /* Użycie flexboxa */
   justify-content: left; /* Wyśrodkuj poziomo-gdy flex */
   align-items: center; /* Wyśrodkuj pionowo-gdy flex */
@@ -128,11 +128,6 @@ width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
-
-
-
-
-
 
 .navLeft {
   width: 100%;
@@ -166,7 +161,8 @@ width: 100%;
 }
 
 .navLeft-item:first-child {
-  margin-left: 0;
+  margin-left: 0px;
+  margin-top: 3px;
 }
 
 .navLeft-item:hover > a {
@@ -190,7 +186,7 @@ width: 100%;
   padding: 0;
   margin: 0;
   position: absolute; /* Pozycjonowanie względem rodzica .menu-item */
-  top: 0; /* Dopasowuje górną krawędź submenu do góry menu-item */
+  top: -2px; /* Dopasowuje górną krawędź submenu do góry menu-item */
   left: 100%; /* Ustawia submenu po prawej stronie rodzica */
   background-color: white; /* Tło submenu */
   display: none; /* Domyślnie ukryte */
@@ -206,7 +202,7 @@ width: 100%;
 .menu-item{
   background-color: white; 
   z-index: 100;
-  border-top: 2px solid rgb(232, 251, 255); 
+  border-bottom: 2px solid rgb(232, 251, 255); 
   height: 30px;
   width: auto;
   padding: 25px 15px;
@@ -275,12 +271,6 @@ width: 100%;
   color: #7aabb4;
 }
 
-
-
-
-
-
-
 .navRight {
   width: 100%;
   max-width: 160px;
@@ -347,30 +337,28 @@ display: none;
 }
 
 #baner {
-  width: 100%;
+  width: 100vw;
+  height: 60vh; /* Wysokość całego okna */
   position: relative;
-  height: 500px;
-  margin-top: 50px;
+  margin-top: 0px;
   margin-bottom: 50px;
   margin-left: 0px;
   margin-right: 0px;
   overflow: hidden; /* Zapobiega wyjściu fal poza baner */
 }
 
-#baner:hover {
-  cursor: pointer;
-}
-
 #banerImg img{
-  width: 100%;
-  height: 500px;
-  /* object-fit: cover; Zapewnia dobre dopasowanie obrazu */
-  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 120%; /* Większa szerokość niż ekran */
+  min-height: 120%; /* Większa wysokość niż ekran */
 }
 
 .wave-bottom {
   position: absolute;
-  bottom: -90px; /* Umieszcza fale na górze */
+  bottom: -50px; /* Umieszcza fale na górze */
   left: 0;
   width: 100%;
   z-index: 1;
@@ -379,22 +367,6 @@ display: none;
 .wave-bottom img {
   width: 100%; /* Rozciąga SVG na całą szerokość */
   height: 200px;
-  display: block;
-}
-
-.wave-top {
-  position: absolute;
-  top: -40px; /* Umieszcza fale na górze */
-  left: 0;
-  width: 100%;
-  z-index: 1;
-  transform: rotate(180deg); /* Odwraca falę */
-  /* overflow: hidden; */
-}
-
-.wave-top img {
-  width: 100%; /* Rozciąga SVG na całą szerokość */
-  height: 100px;
   display: block;
 }
 
@@ -431,7 +403,7 @@ display: none;
   width: 100%;
   height: 100px;
   max-width: 100px;
-  filter: brightness(0) saturate(100%) invert(59%) sepia(56%) saturate(474%) hue-rotate(50deg) brightness(90%) contrast(88%);
+  filter: brightness(0) saturate(100%) invert(70%) sepia(31%) saturate(682%) hue-rotate(141deg) brightness(89%) contrast(91%);
 }
 
 .advText {
@@ -488,7 +460,7 @@ display: none;
   max-width: 250px;
   height: 390px;
   margin: 0px 25px 30px 15px;
-  border: 1px solid #eeeeee;
+
 }
 
 .windowSmall:nth-child(4n) {
@@ -509,6 +481,7 @@ display: none;
   width: 100%;
   max-width: 275px;
   height: 268px;
+  border-radius: 45%; /* Nadaje obrazom okrągły kształt */
 }
 
 .windowText {
